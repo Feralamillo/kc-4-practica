@@ -175,7 +175,7 @@ module.exports = {
 
 ****
 
-`npm i bootstrap``npm i jquery``npm i popper`
+`npm i -D bootstrap jquery popper.js`
 
 ```css
 @import '~reset-css/reset';

@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Práctica Front-end Ninja - Keepcoding</title>
 </head>
+
 <body>
-    <header>Práctica Web</header>
-    <footer>Óscar Antón Galante &copy 2018</footer>
+    <header class="web__header">
+        <h1 class="web__title">Ohar</h1>
+        <nav class="menu">
+            
+                <div class="menu__item">Historia</div>
+                <div class="menu__item">Política</div>
+                <div class="menu__item">Economía</div>
+                <div class="menu__item">Arte</div>
+                <div class="menu__item">Tecnología</div>
+            
+        </nav>
+        <div class="member">
+            <div class="member__sign-in">Entra</div>
+            <div class="member__sign-on">Apúntate</div>
+        </div>
+    </header>
+    <main class="web__main">
+        <section class="articles">
+            <div class="articles__title">
+                <h2>Artículos</h2>
+            </div>
+            <% for (let i = 0; i < 10; i++) { %>
+                <article class="article__item">
+                    <div class="article__image">
+                        <img class="article__photo" src="<%= require('./assets/img/dessert.jpg') %>" alt="Desierto">
+                    </div>
+                    <div class="article__info">
+                        <h3>Título</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Autor</td>
+                                    <td></td>
+                                    <td>Fecha</td>
+                                    <td>Sección</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>José Pérez</td>
+                                    <td><img src="" alt=""></td>
+                                    <td>08/02/2018</td>
+                                    <td>Historia</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="article__excerpt">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum consequat enim, vel pharetra nisi facilisis eu. Curabitur placerat, turpis et tristique dapibus, leo diam ullamcorper odio, ac venenatis dolor lectus non lacus. Mauris sed felis ac neque porttitor pellentesque. Praesent in posuere odio. Vivamus consectetur sapien eget nunc convallis bibendum. Vivamus orci felis, tristique quis mi nec, mattis vulputate est. Vestibulum sit amet laoreet tellus. Fusce accumsan sem risus, in condimentum magna euismod sit amet. Nullam ut rutrum nibh, eget sagittis turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                    </div>
+                    <div class="article__points">Puntuación</div>
+                    <aside class="article__related">
+                        <div>Artículos relacionados</div>
+                    </aside>
+                </article>
+                <% } %>
+        </section>
+    </main>
+    <footer class="web__footer">Óscar Antón Galante &copy 2018</footer>
 </body>
+
 </html>
