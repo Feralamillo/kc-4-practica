@@ -1,20 +1,21 @@
+// to determine the length of the excerpt
 $font-size: 1rem;
 $line-height: 1.4;
 $lines-to-show: 3;
 
-.articles {
+.articles__list {
 
     .article__item {
         display: flex; //para usar flexbox
         flex-direction: column;
-        background: white;
-        margin: 10px;
+        background: #ffffee;
+        margin: 5px;
         //box-shadow: 0 1px 3px grey;
         //border-radius: 5px;
         overflow: hidden;
-        transition: 0.25 all;
+        //transition: 0.25 all;
         display: inline-flex;
-        width: 40%;
+        width: 30%;
 
         .article__image {
             .article__photo {
