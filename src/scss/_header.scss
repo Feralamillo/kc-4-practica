@@ -1,16 +1,12 @@
-.web__header {
-    box-shadow: 0 0 10px grey;
-    background: #003366;
-    color: white;
+@import "mixins/transparent-background";
 
-    .web__title {
-    }
+.web-header {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    box-shadow: 0 0 5px $shadow-color;
 
-    .menu__list {
-        .menu__item {
-        }
-    }
-
-    .member {
+    .navbar-brand {
+        font-size: 1.50rem;
     }
 }
