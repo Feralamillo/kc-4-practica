@@ -1,0 +1,21 @@
+.comments-form {
+    background: white;
+    display: none;
+
+    body.show-form & {
+         display: block;
+    }
+
+    @include if-is-extra-large-device {
+        height: auto;
+        box-shadow: 0 1px 5px $shadow-color;
+
+        div {
+            flex-grow: 1;
+        }
+
+        body.show-form & {
+            display: flex;
+        }
+    }
+}
