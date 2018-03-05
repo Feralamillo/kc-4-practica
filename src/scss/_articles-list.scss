@@ -1,4 +1,23 @@
 .articles-list {
-    padding-top: 100px;
-    padding-bottom: 40px;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.card {
+  margin: 30px;
+
+  .author-image {
+    border-radius: 50%;
+    height: 3rem;
+    padding-right: 20px;
+  }
+  .author-name {
+  }
+  .article-date {
+    padding-right: 20px;
+    font-size: $font-size-small;
+  }
+  .article-topic {
+    font-size: $font-size-small;
+  }
 }
