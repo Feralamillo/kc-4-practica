@@ -1,12 +1,13 @@
-@import "~reset-css/reset";  // importamos node_modules/reset-css/_reset.scss
+@import "~reset-css/reset"; // importamos node_modules/reset-css/_reset.scss
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 @import "~animate.css/animate.css";
 @import url(https://use.fontawesome.com/releases/v5.0.7/css/all.css);
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
 @import "variables";
 @import "html-tags";
 @import "header";
 @import "footer";
 @import "single-article";
 @import "articles-list";
+@import "login";
