@@ -28,7 +28,7 @@ export class CommentsListController {
                 <aside class="comment">
                     <div class="comment__text">${comment.text}</div>
                     <div class="comment__info">
-                        <div class="comment__author">${comment.author}</div>
+                        <div class="comment__author">Por ${comment.author}</div>
                         <div class="comment__date">${comment.date}</div>
                     </div>
                 </aside>

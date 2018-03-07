@@ -27,10 +27,10 @@
             <p>Nullam nec dolor vitae ligula accumsan pulvinar. Praesent porttitor consequat gravida. Aliquam auctor risus id turpis facilisis aliquet. Donec id metus sem. Nulla aliquet posuere turpis at accumsan. Cras a pretium nisl. Aliquam vestibulum semper mollis. Nunc eleifend tincidunt nisl, sed euismod nulla finibus ut. Integer vitae purus ullamcorper, consequat diam ac, efficitur nisl. Sed rhoncus ligula orci, at elementum eros consequat in. Nam imperdiet sem ac nisl maximus, in eleifend lorem scelerisque.
     </div>
     <hr>
-    <div class="single-article__comments">
+    <div class="single-article__comments" id="single-article__comments">
     </div>
-    <div class="comments-form"><span class="comments-form__title">Deja tu comentario</span>
-        <form novalidate class="">
+    <div><span class="comments-form__title">Deja tu comentario</span>
+        <form novalidate class="comments-form">
             <div>
                 <input type="text" id="input__name" name="input__name" placeholder="Nombre" required>
             </div>
@@ -38,10 +38,10 @@
                 <input type="email" id="input__email" name="input__email" placeholder="e-Mail" required>
             </div>
             <div>
-                <input type="textarea" id="input__text" name="input__text" placeholder="Comentario" required>
+                <textarea id="input__text" name="input__text" placeholder="Comentario" required></textarea>
             </div>
             <div>
-                <button disabled id="send-comment_button">Dejar comentario</button>
+                <button disabled class="send-comment_button">Dejar comentario</button>
             </div>
         </form>
         <div>

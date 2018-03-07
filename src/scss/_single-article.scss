@@ -19,6 +19,7 @@
         }
         .article-date {
             padding-right: 20px;
+            padding-left: calc(3rem + 20px);
             font-size: $font-size-small;
         }
         .article-topic {
@@ -47,7 +48,9 @@
             }
             .comment__info{
                 padding-left: 20px;
-                .comment__author{}
+                .comment__author{
+                    
+                }
                 .comment__date{
                     font-size: $font-size-small;
                 }
@@ -55,11 +58,11 @@
         }
     }
 
+    .comments-form__title {
+        font-family: $title-font-family;
+        font-size: $font-size-h3;
+    }
     .comments-form {
         padding-left: 50px;
-        .comments-form__title {
-            font-family: $title-font-family;
-            font-size: $font-size-h3;
-        }
     }
 }

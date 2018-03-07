@@ -36,7 +36,7 @@ input {
     border: 1px solid $border-color;
     margin: 10px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: $font-size-base;
     &.error {
         border: 1px solid $error-color;
@@ -45,9 +45,17 @@ input {
     &:focus {
         outline-color: $outline-color;
     }
+
+
 }
 
-#send-comment_button {
+textarea {
+    @extend input;
+    height: 200px;
+    vertical-align:text-top
+}
+
+.send-comment_button {
     @extend input;
     background-color: $button-background;
     color: white;

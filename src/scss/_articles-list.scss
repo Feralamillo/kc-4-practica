@@ -8,11 +8,11 @@
     margin: 30px;
 
     @include if-is-small-device{
-      width: calc(50%-20px)
+      width: calc(50%-20px);
     }
 
     @include if-is-medium-device{
-      width: calc(33%-20px)
+      width: calc(33%-20px);
     }
 
     .author-image {

@@ -1,4 +1,4 @@
-
+var moment = require('moment');
 
 export class FormController {
 
@@ -12,7 +12,7 @@ export class FormController {
 
     setLoading(loading) {
         this.loading = loading;
-        this.element.querySelectorAll('input, send-comment-button').forEach(item => { item.disabled = loading });
+        this.element.querySelectorAll('input, textarea, send-comment-button').forEach(item => { item.disabled = loading });
     }
 
     addEventListeners() {
@@ -42,16 +42,19 @@ export class FormController {
     }
 
     buildCommentData() {
+        let now = moment().format('YYYY-MM-DD HH:mm:ss');
+        console.log(now.value);
         return {
             author: this.element.querySelector('#input__name').value,
             email: this.element.querySelector('#input__email').value,
-            text: this.element.querySelector('#input__text').value
+            text: this.element.querySelector('#input__text').value,
+            date: now,
         }
     }
 
     addInputListeners() {
         // en todos los input que hay en el formulario, los valido cuando se pierde el foco
-        this.element.querySelectorAll('input').forEach(input => {
+        this.element.querySelectorAll('input, textarea').forEach(input => {
 
             input.addEventListener('blur', event => {
                 // event.target sería lo mismo que input en este caso
@@ -67,7 +70,8 @@ export class FormController {
     }
 
     checkFormValidity() {
-        let button = this.element.querySelector('send-comment-button');
+        let button = this.element.querySelector('.send-comment_button');
+        console.log(button);
         if (this.element.checkValidity()) {
             button.disabled = false;
         } else {

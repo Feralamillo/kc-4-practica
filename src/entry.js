@@ -14,4 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let commentsListController = new CommentsListController(".single-article__comments", commentsService, PubSub);
     commentsListController.loadComments();
 
+    let formController = new FormController('.comments-form', commentsService, PubSub);
+
 });
