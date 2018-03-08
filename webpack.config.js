@@ -108,6 +108,20 @@ module.exports = {
                 collapseWhitespace: true
             }
         }),
+        new HtmlWebpackPlugin({
+            filename: 'login.html',
+            template: path.join(__dirname, 'src', 'login.html'),
+            minify: {
+                collapseWhitespace: true
+            }
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'signup.html',
+            template: path.join(__dirname, 'src', 'signup.html'),
+            minify: {
+                collapseWhitespace: true
+            }
+        }),
         new ExtractTextPlugin('style.css')
     ],
 
