@@ -1,44 +1,26 @@
 # Biztoday
 
-Este proyecto
+Este proyecto es el frontend de un portal de noticias responsive.
 
-The aim of the practice is to create the front-end of Medium with a responsive layout.
-
-We have to create:
-
-* List of articles
-* Detail of article
-
-## Requirements
-
-### All templates
-
-All the templates must have the same header and footer
+Las caracteristicas de la plataforma son:
 
 * Header
-  * name of platform
-  * search input
-  * list of topics
-  * login -> template
-  * sign up -> template
+  * Nombre de la plataforma
+  * Listado de temas
+  * Login y registro
+  * Buscador
 * Footer
-  * Name of the platform
-  * Go to beginning of site
+  * Copyright
+  * Nombre de la plataforma
+* Lista de articulos
+  * Titulo vinculado al artículo
+  * Imagen
+  * Text introductorio
+  * Información del autor
+  * Dia de la publicación
+  * Comentarios
+* Articulo individual
+  * Imagen
+  * Sistema de comentarios
 
-### List of Articles
-
-* 10 articles
-* Title
-* Image
-* Introductory text
-* Author info - name and image. At least 2 articles with a placeholder image.
-* Day and hour of publication.
-* An iteration element that allows user to say that he likes it
-* Number of comments
-* Pagination system
-
-### Detail of Article
-
-* One image
-* Text in many parragraphs with some **bold**, some _italic_ and some [links](#).
-* Comments system
+  Este proyecto ha sido realizado por [Oscar Anton](https://github.com/oscaranton) y [Fernando Alamillo](https://github.com/Feralamillo/)
