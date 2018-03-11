@@ -2,6 +2,7 @@ export class CommentsListController {
 
     constructor(selector, commentsService, pubSub) {
         this.element = document.querySelector(selector);
+        console.log(this.element);
         this.commentsService = commentsService;
         pubSub.subscribe('comment:created', (event, comment) => {
             console.log("CommentsListController", comment);
@@ -37,20 +38,20 @@ export class CommentsListController {
         this.element.innerHTML = html;
     }
 
-    numComments() {
-        for (let comment of comments) {
-            var num = comment.id;
-        }
-    }
+    // numComments() {
+    //     for (let comment of comments) {
+    //         var num = comment.id;
+    //     }
+    // }
 
-    renderNumComments(comments) {
-        for (let comment of comments) {
-            var num = comment.id;
-        }
-        let html = '<div class="card-text"><a href="/article.html#single-article__comments">Hay ' + num + ' comentarios</a></div>';
+    // renderNumComments(comments) {
+    //     for (let comment of comments) {
+    //         var num = comment.id;
+    //     }
+    //     let html = '<div class="card-text"><a href="/article.html#single-article__comments">Hay ' + num + ' comentarios</a></div>';
 
-        this.element.innerHTML = html;
-    }
+    //     this.element.innerHTML = html;
+    // }
 
     loadComments() {
         this.showLoadingMessage();
@@ -67,18 +68,18 @@ export class CommentsListController {
 
     }
 
-    loadNumComments() {
-        this.showLoadingMessage();
-        this.commentsService.list().then(comments => {
-            if (comments.length == 0) {
-                this.showNoCommentsMessage();
-            } else {
-                this.renderNumComments(comments);
-            }
-        }).catch((error) => {
-            console.error("ERROR RETRIEVING COMMENTS", error);
-            this.showErrorMessage();
-        });
-    }
+    // loadNumComments() {
+    //     this.showLoadingMessage();
+    //     this.commentsService.list().then(comments => {
+    //         if (comments.length == 0) {
+    //             this.showNoCommentsMessage();
+    //         } else {
+    //             this.renderNumComments(comments);
+    //         }
+    //     }).catch((error) => {
+    //         console.error("ERROR RETRIEVING COMMENTS", error);
+    //         this.showErrorMessage();
+    //     });
+    // }
 
 }
