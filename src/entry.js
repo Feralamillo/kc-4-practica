@@ -11,9 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let commentsService = new CommentsService('http://localhost:3001/comments/');
 
     // controls the display of the comments in the article
-    let commentsListController = new CommentsListController(".single-article__comments", commentsService, PubSub);
-    commentsListController.loadComments();
+    //let commentsListController = new CommentsListController(".single-article__comments", commentsService, PubSub);
+    //commentsListController.loadComments();
+
+    //displays number of comments in the article lists
+    let commentsListController = new CommentsListController(".num__comments", commentsService, PubSub);
+    commentsListController.loadNumComments();
 
     let formController = new FormController('.comments-form', commentsService, PubSub);
+
+
 
 });

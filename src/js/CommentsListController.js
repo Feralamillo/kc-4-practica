@@ -17,7 +17,7 @@ export class CommentsListController {
         this.element.innerHTML = '<div class="error">Se ha producido un error</div>';
     }
 
-    showNoCommentsMessage() {
+    showNoCommentsMessage() {
         this.element.innerHTML = '<div class="info">No hay ningún comentario</div>';
     }
 
@@ -37,6 +37,21 @@ export class CommentsListController {
         this.element.innerHTML = html;
     }
 
+    numComments() {
+        for (let comment of comments) {
+            var num = comment.id;
+        }
+    }
+
+    renderNumComments(comments) {
+        for (let comment of comments) {
+            var num = comment.id;
+        }
+        let html = '<div class="card-text"><a href="/article.html#single-article__comments">Hay ' + num + ' comentarios</a></div>';
+
+        this.element.innerHTML = html;
+    }
+
     loadComments() {
         this.showLoadingMessage();
         this.commentsService.list().then(comments => {
@@ -50,6 +65,20 @@ export class CommentsListController {
             this.showErrorMessage();
         });
 
+    }
+
+    loadNumComments() {
+        this.showLoadingMessage();
+        this.commentsService.list().then(comments => {
+            if (comments.length == 0) {
+                this.showNoCommentsMessage();
+            } else {
+                this.renderNumComments(comments);
+            }
+        }).catch((error) => {
+            console.error("ERROR RETRIEVING COMMENTS", error);
+            this.showErrorMessage();
+        });
     }
 
 }
