@@ -1,7 +1,7 @@
 @import "mixins/responsive-utils.scss";
 
 main {
-  padding-top: 40px;
+  padding-top: 100px;
   padding-bottom: 30px;
 }
 
@@ -19,22 +19,22 @@ main {
       overflow: hidden;
       transition: $default-transition-time all;
 
-      @include if-is-small-device {
-          display: inline-block;
-          width: calc(50% - 20px);
-      }
+    //   @include if-is-small-device {
+    //       display: inline-block;
+    //       width: calc(50% - 20px);
+    //   }
 
-      @include if-is-medium-device {
-          width: calc(33% - 20px);
-      }
+    //   @include if-is-medium-device {
+    //       width: calc(33% - 20px);
+    //   }
 
-      @include if-is-large-device {
-          width: calc(33% - 20px);
-      }
+    //   @include if-is-large-device {
+    //       width: calc(33% - 20px);
+    //   }
 
-      @include if-is-extra-large-device {
-          width: calc(25% - 20px);
-      }
+    //   @include if-is-extra-large-device {
+    //       width: calc(25% - 20px);
+    //   }
 
       &:hover {
           cursor: pointer;
