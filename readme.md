@@ -1,4 +1,6 @@
-# How to develop the practice?
+# Biztoday
+
+Este proyecto
 
 The aim of the practice is to create the front-end of Medium with a responsive layout.
 
@@ -6,11 +8,6 @@ We have to create:
 
 * List of articles
 * Detail of article
-
-Examples:
-
-* [nexo club](https://nexo.club/)
-* [Icofunding](https://blog.icofunding.com/)
 
 ## Requirements
 
